@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LW-RBSMRSA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+    <body>
+        <h1 class = "title">Light Weight Random Bit-Stuffing - Modified RSA</h1>
+        <form method="post">
+            <label for="message">Enter your message:</label><br>
+            <input type="text" id="message" name="message" placeholder="message" value="{{ request.form['message'] }}">
+            <br>
+            <input class="button" type="submit" value="Submit">
+        
+            <div class="result">
+                {% if result %}
+                {% if result.error %}
+                    <p>{{ result.error }}</p>
+                {% else %}
+                    <div>
+                        <h2>Result:</h2>
+                        <br>
+                        <p>Encrypted Text = {{ result['encrypted'] }}</p>
+                        <br>
+                        <p>Decrypted Text = {{ result['decrypted'] }}</p>
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+    </form>
+    <footer>
+        <p>Done By: Parimala G, Baratraaj S</p>
+    </footer>
+</body>
+</html>

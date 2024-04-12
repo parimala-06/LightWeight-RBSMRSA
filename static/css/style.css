@@ -1,0 +1,64 @@
+* {
+    margin: 0px; 
+    padding: 0px;
+    font-family: "Poppins", sans-serif;  
+}
+body {
+    background: rgb(213, 216, 255);
+    
+}
+.hero-section {
+    text-align: center;
+}
+.title {
+    padding: 40px;
+    text-align: center;
+    font-size: 30px;  
+    font-weight: 500;
+}
+form {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px;
+}
+form > input { 
+    width: 300px;
+    height: 20px; 
+    border-radius: 5px; 
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid rgb(228, 230, 255);
+}
+form > label {
+    font-size: 20px;
+}
+.button {
+    background-color: rgba(0, 3, 101); 
+    width: 320px;
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 5px; 
+    color: whitesmoke;
+}
+.button:hover { 
+    cursor: pointer;
+    background-color: rgb(0, 4, 117);
+}
+.result{
+    padding: 40px;
+    font-size: 20px;
+}
+.result h2{
+    font-size: 25px;
+    font-weight: 500;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
