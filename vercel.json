@@ -3,7 +3,7 @@
     "routes": [
       {
         "src": "/encrypt/(.*)",
-        "dest": "/encrypt.py"
+        "dest": "/app.py"
       },
       {
         "src": "/(.*)",
@@ -12,7 +12,7 @@
     ],
     "builds": [
       {
-        "src": "/encrypt.py",
+        "src": "/app.py",
         "use": "@vercel/python"
       },
       {
